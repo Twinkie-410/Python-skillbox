@@ -12,9 +12,9 @@ good_weekday_dict = {
     0: "Хорошего понедельника", 1: "Хорошего вторника", 2: "Хорошей среды", 3: "Хорошего четверга",
     4: "Хорошеё пятницы",
     5: "Хорошей субботы", 6: "Хорошего воскресенья"}
-print(sys.getsizeof(good_weekday_tuple))
-print(sys.getsizeof(good_weekday_list))
-print(sys.getsizeof(good_weekday_dict))
+# print(sys.getsizeof(good_weekday_tuple))
+# print(sys.getsizeof(good_weekday_list))
+# print(sys.getsizeof(good_weekday_dict))
 
 app = Flask(__name__)
 

@@ -5,9 +5,8 @@ app = Flask(__name__)
 
 @app.route("/max_number/<path:numbers>/")
 def max_number(numbers):
-    inp = numbers.split('/')
     numbs = []
-    for num in inp:
+    for num in numbers.split('/'):
         if not num.isdigit():
             return f"<em>{num}</em> - не являеется числом"
         numbs.append(int(num))

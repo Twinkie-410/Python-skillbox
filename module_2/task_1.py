@@ -1,10 +1,8 @@
 def get_summary_rss(path: str, format):
     with open(path, 'r') as file:
         file_content = file.readlines()
-        sum_rss = 0
-        for line in file_content[1:]:
-            sum_rss += int(line.split()[5])
-    formats = {'B': 1/1024, 'KiB': 1, 'MiB': 1024, 'GiB': 1024 ** 2}
+        sum_rss = sum(int(line.split()[5]) for line in file_content[1:])
+    formats = {'B': 1 / 1024, 'KiB': 1, 'MiB': 1024, 'GiB': 1024 ** 2}
     if format in formats:
         return round(sum_rss / formats[format], 2)
     return 'неверный формат'

@@ -8,6 +8,8 @@ storage = {}
 
 @app.route("/add/<date>/<int:number>")
 def add(date, number):
+    if len(date) != 8:
+        raise ValueError('Некорректная дата')
     storage.setdefault(date, 0)
     storage[date] += number
 

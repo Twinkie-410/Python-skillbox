@@ -1,0 +1,17 @@
+<--""
+   Level WARNING
+   |
+   o<--"app"
+   |   Level DEBUG
+   |   Handler Stream <_io.TextIOWrapper name='<stdout>' mode='w' encoding='utf-8'>
+   |     Level DEBUG
+   |     Formatter fmt='%(levelname)s | %(name)s | %(asctime)s | %(lineno)d | %(message)s' datefmt=None
+   |   Handler <FileByLevelHandler (DEBUG)>
+   |     Level DEBUG
+   |     Formatter fmt='%(levelname)s | %(name)s | %(asctime)s | %(lineno)d | %(message)s' datefmt=None
+   |
+   o<--"utils"
+       Level INFO
+       Handler TimedRotatingFile 'D:\\Ó÷¸áà\\Python\\Python(skillbox)\\module_7\\utils.log' when='H' interval=36000 backupCount=1
+         Level INFO
+         Formatter fmt='%(levelname)s | %(name)s | %(asctime)s | %(lineno)d | %(message)s' datefmt=None
